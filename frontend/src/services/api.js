@@ -5,9 +5,9 @@
 
 import axios from 'axios';
 
-// Use Railway URL in production, localhost in development
+// Use Render URL in production, localhost in development
 const API_BASE_URL = process.env.NODE_ENV === 'production' 
-  ? 'https://your-backend-app.railway.app/api'  // Replace with your Railway URL
+  ? 'https://predictive-maintenance-system-ajlc.onrender.com/api'  // Your Render backend
   : 'http://localhost:5002/api';
 
 const api = axios.create({

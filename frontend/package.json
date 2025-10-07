@@ -42,5 +42,8 @@
     ]
   },
   "homepage": "https://yourusername.github.io/Predictive-Maintenance-System",
-  "proxy": "http://localhost:5000"
+  "proxy": "http://localhost:5000",
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
 }
