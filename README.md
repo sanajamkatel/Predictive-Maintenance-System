@@ -337,66 +337,6 @@ def predict(sensor_data: dict):
     return {"failure_probability": model.predict_proba(...)}
 ```
 
-## Why This Project Is Impressive
-
-### For Recruiters/Employers
-1. **Solves Real Business Problems**: Directly addresses $thousands/hour downtime costs
-2. **Industry-Relevant**: Perfect for manufacturing, fleet management, aviation
-3. **Full-Stack**: Data pipeline → ML → Dashboard → ROI
-4. **Production-Ready**: Not just a toy project, actually deployable
-5. **Quantified Value**: Clear ROI metrics, not vague "benefits"
-
-### Technical Depth
-1. **Advanced ML**: Ensemble methods, feature engineering, class balancing
-2. **Performance**: O(1) predictions, optimized for real-time
-3. **Visualization**: Interactive dashboards, multiple chart types
-4. **Data Science**: 20K+ records, 30+ features, statistical analysis
-
-### Business Understanding
-1. **ROI-Focused**: Every feature justified by business value
-2. **Industry Knowledge**: Realistic sensor ranges, failure patterns
-3. **Scalability**: Works for 10 engines or 10,000 engines
-4. **User Experience**: Non-technical users can operate dashboard
-
-## What You've Built
-
-A **professional-grade predictive maintenance system** that:
-
-- Generates realistic IoT sensor data
-- Engineers 30+ features from raw sensors
-- Trains ML model with 96%+ accuracy
-- Provides <1ms real-time predictions
-- Displays interactive web dashboard
-- Calculates ROI with $850K+ annual savings
-- Includes comprehensive documentation
-- Ready for production deployment
-
-**Total Lines of Code**: ~6,000+ (professional quality, well-documented)
-
-**Technologies**: 9 major libraries, 7 Python modules, 1 interactive dashboard
-
-**Business Value**: Quantified 340% ROI, 3.5-month payback
-
-## Success Metrics
-
-### Technical Excellence
-- Clean, modular code architecture
-- Proper error handling
-- Comprehensive comments
-- Type hints and documentation
-- Performance optimization
-
-### User Experience
-- Beautiful, intuitive dashboard
-- Clear visualizations
-- Actionable insights
-- Multiple user personas (technician, manager, executive)
-
-### Business Impact
-- Measurable ROI
-- Industry-relevant solution
-- Scalable architecture
-- Real-world applicability
 
 ## Quick Start
 ```bash
@@ -420,9 +360,3 @@ npm start
 - **Portfolio**: [https://sanajamkatel.github.io/](https://sanajamkatel.github.io/)
 - **LinkedIn**: [https://www.linkedin.com/in/sadhanajamkatel](https://www.linkedin.com/in/sadhanajamkatel)
 - **GitHub**: [@sanajamkatel](https://github.com/sanajamkatel)
-
----
-
-**Built to demonstrate world-class ML engineering skills**
-
-Ready to impress employers with real-world AI/ML expertise!
