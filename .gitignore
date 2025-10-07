@@ -1,0 +1,62 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# Data files (too large for GitHub)
+data/*.csv
+data/*.pkl
+data/*.png
+!data/.gitkeep
+
+# Logs
+*.log
+nohup.out
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment
+.env
+.env.local
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# React build
+frontend/build/
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+
+# NASA raw data (already have, but large)
+NASA Folder/*.txt
+
+# Temp files
+*.tmp
+*.bak
+*.swp
+.cache/

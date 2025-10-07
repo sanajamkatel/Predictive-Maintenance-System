@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Predictive-Maintenance-System/static/css/main.a657e8f0.css",
+    "main.js": "/Predictive-Maintenance-System/static/js/main.d64c9a04.js",
+    "index.html": "/Predictive-Maintenance-System/index.html",
+    "main.a657e8f0.css.map": "/Predictive-Maintenance-System/static/css/main.a657e8f0.css.map",
+    "main.d64c9a04.js.map": "/Predictive-Maintenance-System/static/js/main.d64c9a04.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a657e8f0.css",
+    "static/js/main.d64c9a04.js"
+  ]
+}
