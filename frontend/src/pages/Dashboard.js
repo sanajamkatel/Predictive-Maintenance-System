@@ -6,6 +6,7 @@ import {
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import WarningIcon from '@mui/icons-material/Warning';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import ErrorIcon from '@mui/icons-material/Error';
 import SpeedIcon from '@mui/icons-material/Speed';
 import { motion } from 'framer-motion';
 import { getFleetStats } from '../services/api';
@@ -147,14 +148,34 @@ function Dashboard() {
             whileHover="hover"
             custom={cardHoverVariants}
           >
+            <Card elevation={3} sx={{ background: 'linear-gradient(135deg, #ff9800 0%, #f57c00 100%)', color: 'white', borderRadius: 3 }}>
+            <CardContent>
+              <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                <Box>
+                  <Typography variant="h3">{stats?.warning_engines || 0}</Typography>
+                  <Typography variant="subtitle1">Warning</Typography>
+                </Box>
+                <WarningIcon sx={{ fontSize: 50, opacity: 0.8 }} />
+              </Box>
+              </CardContent>
+            </Card>
+          </motion.div>
+        </Grid>
+
+        <Grid item xs={12} md={3}>
+          <motion.div
+            variants={itemVariants}
+            whileHover="hover"
+            custom={cardHoverVariants}
+          >
             <Card elevation={3} sx={{ background: 'linear-gradient(135deg, #ef5350 0%, #e53935 100%)', color: 'white', borderRadius: 3 }}>
             <CardContent>
               <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <Box>
-                  <Typography variant="h3">{stats?.at_risk_engines || 0}</Typography>
-                  <Typography variant="subtitle1">At Risk</Typography>
+                  <Typography variant="h3">{stats?.critical_engines || 0}</Typography>
+                  <Typography variant="subtitle1">Critical</Typography>
                 </Box>
-                <WarningIcon sx={{ fontSize: 50, opacity: 0.8 }} />
+                <ErrorIcon sx={{ fontSize: 50, opacity: 0.8 }} />
               </Box>
               </CardContent>
             </Card>

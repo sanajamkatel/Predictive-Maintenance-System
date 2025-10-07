@@ -10,7 +10,7 @@ import { motion } from 'framer-motion';
 import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 import { getEngines, getFleetStats } from '../services/api';
 
-const COLORS = ['#10B981', '#EF4444', '#F59E0B']; // Green, Red, Orange
+const COLORS = ['#10B981', '#F59E0B', '#EF4444']; // Green, Orange, Red
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -83,7 +83,7 @@ function FleetOverview() {
   }
 
   // Empty state when no engines are at risk
-  if (stats && stats.at_risk_engines === 0) {
+  if (stats && (stats.warning_engines === 0 && stats.critical_engines === 0)) {
     return (
       <motion.div
         variants={containerVariants}
@@ -136,8 +136,12 @@ function FleetOverview() {
                   <Chip label={`${stats.healthy_engines}`} color="success" size="small" />
                 </Box>
                 <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 1 }}>
-                  <Typography variant="body2">At Risk Engines:</Typography>
-                  <Chip label={`${stats.at_risk_engines}`} color="success" size="small" />
+                  <Typography variant="body2">Warning Engines:</Typography>
+                  <Chip label={`${stats.warning_engines || 0}`} color="warning" size="small" />
+                </Box>
+                <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 1 }}>
+                  <Typography variant="body2">Critical Engines:</Typography>
+                  <Chip label={`${stats.critical_engines || 0}`} color="error" size="small" />
                 </Box>
                 <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 2 }}>
                   <Typography variant="body2">Health Percentage:</Typography>
@@ -158,7 +162,8 @@ function FleetOverview() {
 
   const pieData = [
     { name: 'Healthy', value: stats?.healthy_engines || 0 },
-    { name: 'At Risk', value: stats?.at_risk_engines || 0 },
+    { name: 'Warning', value: stats?.warning_engines || 0 },
+    { name: 'Critical', value: stats?.critical_engines || 0 },
   ];
 
   const barData = [

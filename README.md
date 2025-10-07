@@ -398,6 +398,34 @@ A **professional-grade predictive maintenance system** that:
 - Scalable architecture
 - Real-world applicability
 
+## 🚀 Deployment
+
+### Live Demo
+- **Frontend**: [GitHub Pages](https://sanajamkatel.github.io/Predictive-Maintenance-System) (Coming Soon)
+- **Backend**: Railway API (Coming Soon)
+
+### Deploy Your Own
+1. **Backend**: Deploy to Railway (free tier)
+2. **Frontend**: Deploy to GitHub Pages (free)
+3. See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed instructions
+
+### Quick Start
+```bash
+# Clone repository
+git clone https://github.com/sanajamkatel/Predictive-Maintenance-System.git
+cd Predictive-Maintenance-System
+
+# Start backend
+cd backend
+pip install -r requirements.txt
+python api.py
+
+# Start frontend (new terminal)
+cd frontend
+npm install
+npm start
+```
+
 ## Contact & Links
 
 - **Portfolio**: [https://sanajamkatel.github.io/](https://sanajamkatel.github.io/)

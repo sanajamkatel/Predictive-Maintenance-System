@@ -5,7 +5,10 @@
 
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:5002/api';
+// Use Railway URL in production, localhost in development
+const API_BASE_URL = process.env.NODE_ENV === 'production' 
+  ? 'https://your-backend-app.railway.app/api'  // Replace with your Railway URL
+  : 'http://localhost:5002/api';
 
 const api = axios.create({
   baseURL: API_BASE_URL,
