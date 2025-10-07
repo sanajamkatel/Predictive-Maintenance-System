@@ -39,6 +39,15 @@ def load_resources():
     else:
         print("  Data not found. Please run data_simulator.py first")
 
+@app.route('/', methods=['GET'])
+def root():
+    """Root endpoint for Render health checks"""
+    return jsonify({
+        'message': 'Predictive Maintenance System API',
+        'status': 'running',
+        'version': '1.0.0'
+    })
+
 @app.route('/api/health', methods=['GET'])
 def health_check():
     """Health check endpoint"""
