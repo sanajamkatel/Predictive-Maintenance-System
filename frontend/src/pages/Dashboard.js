@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {
-  Grid, Card, CardContent, Typography, Box, Alert, CircularProgress,
+  Grid, Card, CardContent, Typography, Box, Alert,
   Chip
 } from '@mui/material';
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
@@ -10,6 +10,7 @@ import ErrorIcon from '@mui/icons-material/Error';
 import SpeedIcon from '@mui/icons-material/Speed';
 import { motion } from 'framer-motion';
 import { getFleetStats } from '../services/api';
+import LoadingState from '../components/LoadingState';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -68,14 +69,7 @@ function Dashboard() {
   };
 
   if (loading) {
-    return (
-      <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', mt: 10 }}>
-        <CircularProgress size={60} thickness={4} sx={{ color: '#ec407a' }} />
-        <Typography variant="h6" sx={{ mt: 2, color: '#c2185b' }}>
-          Loading dashboard...
-        </Typography>
-      </Box>
-    );
+    return <LoadingState message="Loading dashboard..." />;
   }
 
   if (error) {

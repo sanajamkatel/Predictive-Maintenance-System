@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {
-  Grid, Card, CardContent, Typography, Box, Alert, CircularProgress,
+  Grid, Card, CardContent, Typography, Box, Alert,
   Table, TableBody, TableCell, TableContainer, TableHead, TableRow,
   Paper, Chip
 } from '@mui/material';
@@ -9,6 +9,7 @@ import CelebrationIcon from '@mui/icons-material/Celebration';
 import { motion } from 'framer-motion';
 import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 import { getEngines, getFleetStats } from '../services/api';
+import LoadingState from '../components/LoadingState';
 
 const COLORS = ['#10B981', '#F59E0B', '#EF4444']; // Green, Orange, Red
 
@@ -64,14 +65,7 @@ function FleetOverview() {
   };
 
   if (loading) {
-    return (
-      <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', mt: 10 }}>
-        <CircularProgress size={60} thickness={4} sx={{ color: '#ec407a', mb: 2 }} />
-        <Typography variant="h6" sx={{ color: '#c2185b' }}>
-          Loading fleet data...
-        </Typography>
-      </Box>
-    );
+    return <LoadingState message="Loading fleet data..." />;
   }
 
   if (error) {

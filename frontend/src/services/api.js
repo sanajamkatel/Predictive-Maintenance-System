@@ -7,7 +7,7 @@ import axios from 'axios';
 
 // Use Render URL in production, localhost in development
 const API_BASE_URL = process.env.NODE_ENV === 'production' 
-  ? 'https://predictive-maintenance-system-ajlc.onrender.com/api'  // Your Render backend
+  ? 'https://predictive-maintenance-system-5i7l.onrender.com/api'  // Your Render backend
   : 'http://localhost:5002/api';
 
 const api = axios.create({

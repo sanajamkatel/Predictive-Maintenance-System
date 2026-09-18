@@ -21,6 +21,7 @@ import SensorGauge from '../components/SensorGauge';
 import AlertTeamButton from '../components/AlertTeamButton';
 import ExportReportButton from '../components/ExportReportButton';
 import { getEngines, predictFailure, getEngineHistory } from '../services/api';
+import LoadingState from '../components/LoadingState';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -103,14 +104,7 @@ function EngineMonitor() {
   };
 
   if (engines.length === 0) {
-    return (
-      <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', mt: 10 }}>
-        <CircularProgress size={60} thickness={4} sx={{ color: '#ec407a', mb: 2 }} />
-        <Typography variant="h6" sx={{ color: '#c2185b' }}>
-          Loading engines...
-        </Typography>
-      </Box>
-    );
+    return <LoadingState message="Loading engines..." />;
   }
 
   return (
