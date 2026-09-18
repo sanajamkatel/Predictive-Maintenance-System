@@ -39,6 +39,8 @@ def load_resources():
     else:
         print("  Data not found. Please run data_simulator.py first")
 
+load_resources()
+
 @app.route('/', methods=['GET'])
 def root():
     """Root endpoint for Render health checks"""
@@ -378,13 +380,8 @@ if __name__ == '__main__':
     print("\n" + "="*60)
     print("PREDICTIVE MAINTENANCE API SERVER")
     print("="*60)
-    
-    # Load resources
-    load_resources()
-    
     print("\n" + "="*60)
     print("Starting Flask server...")
-    print("API will be available at: http://localhost:5001")
     print("="*60)
     print("\nAvailable endpoints:")
     print("  GET  /api/health              - Health check")
@@ -396,5 +393,6 @@ if __name__ == '__main__':
     print("  POST /api/roi/calculate       - Calculate ROI")
     print("\n" + "="*60 + "\n")
     
-    app.run(debug=True, host='0.0.0.0', port=5002)
+    port = int(os.environ.get('PORT', 5002))
+    app.run(debug=False, host='0.0.0.0', port=port)
 
